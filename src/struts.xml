@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"  
+    "http://struts.apache.org/dtds/struts-2.5.dtd">  
+<struts>  
+    <package name="account" extends="struts-default">
+      <action name="registerUser" class="cn.ssdut.omega.action.AccountAction_Omega" method="registerUser">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+         <result name="empty">/register.jsp</result>
+      </action>
+      
+      <action name="registerManager" class="cn.ssdut.omega.action.AccountAction_Omega" method="registerManager">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+         <result name="empty">/register.jsp</result>
+      </action>
+      
+      <action name="loginUser" class="cn.ssdut.omega.action.AccountAction_Omega" method="loginUser">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+         <result name="empty">/register.jsp</result>
+      </action>
+      
+      <action name="loginManager" class="cn.ssdut.omega.action.AccountAction_Omega" method="loginManager">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+         <result name="empty">/register.jsp</result>
+      </action>
+      
+      <action name="validateMail" class="cn.ssdut.omega.action.AccountAction_Omega" method="validateMail">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+      </action>
+      
+      <action name="logout" class="cn.ssdut.omega.action.AccountAction_Omega" method="logout">
+       <result name="success">/main.jsp</result>
+      </action>
+      
+      <action name="updateUser" class="cn.ssdut.omega.action.AccountAction_Omega" method="updateUser">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+         <result name="unlogin">/main.jsp</result>
+      </action>
+      
+      <action name="updateManager" class="cn.ssdut.omega.action.AccountAction_Omega" method="updateManager">
+         <result name="success">/main.jsp</result>
+         <result name="error">/error.jsp</result>
+         <result name="unlogin">/main.jsp</result>
+      </action>
+    </package>
+    
+    <package name="shop" extends="struts-default" >
+      <action name="startShop" class="cn.ssdut.omega.action.ShopAction_Omega" method="startShop">
+        <result name="success">/main.jsp</result>
+        <result name="error">/error.jsp</result>
+      </action>
+      
+      <action name="closeShop" class="cn.ssdut.omega.action.ShopAction_Omega" method="closeShop">
+        <result name="success">/manage.jsp</result>
+        <result name="error">/error.jsp</result>
+      </action>
+    </package>
+    
+    <package name="product" extends="struts-default" >
+      <action name="uploadFile" class="cn.ssdut.omega.action.ProductAction_Omega" method="upload">
+        <result name="success">/manage.jsp</result>
+        <result name="error">/error.jsp</result>
+        <result name="unshop">/empty.jsp</result>
+      </action>
+      <action name="addProductToCart" class="cn.ssdut.omega.action.ProductAction_Omega" method="addToCart">
+               <result name="success">/product_details.jsp</result>
+               <result name="error">/error.jsp</result>
+               <result name="unshop">/empty.jsp</result>
+      </action>
+      <action name="addProduct" class="cn.ssdut.omega.action.ProductAction_Omega" method="add">
+        <result name="success">/manage.jsp</result>
+        <result name="error">/error.jsp</result>
+      </action>
+      
+      <action name="deleteProduct" class="cn.ssdut.omega.action.ProductAction_Omega" method="delete">
+        <result name="success">/manage.jsp</result>
+        <result name="error">/error.jsp</result>
+      </action>
+      
+      <action name="updateProduct" class="cn.ssdut.omega.action.ProductAction_Omega" method="update">
+        <result name="success">/manage.jsp</result>
+        <result name="error">/error.jsp</result>
+      </action>
+      <action name="addRemark" class="cn.ssdut.omega.action.RemarkAction_Omega" method="add">
+              <result name="success">/CommentList.jsp</result>
+        <result name="error">/error.jsp</result>
+      </action>
+      <action name="cleanCart" class="cn.ssdut.omega.action.CartAction_Omega" method="delete">
+                   <result name="success">/cart.jsp</result>
+        <result name="error">/error.jsp</result> 
+      </action>
+            <action name="payOff" class="cn.ssdut.omega.action.CartAction_Omega" method="pay">
+                   <result name="success">/myorder.jsp</result>
+        <result name="error">/error.jsp</result> 
+      </action>
+    </package>
+</struts>  
